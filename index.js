@@ -40,7 +40,7 @@ app.use((req, res)=>{
 
 
 app.get('/', (req, res)=>{
-    res.send("Welcome to API")
+    res.send("Hi, welcome to this API")
 })
 
 
