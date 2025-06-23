@@ -21,10 +21,10 @@ app.use(loggerMiddleware);
 
 
 
-// app.use((err, req, res, next)=>{
-//     console.log(err)
-//     res.status(500).send("Something went wrong. Please try again later!!")
-// })
+app.get('/', (req, res)=>{
+    res.send("Hi, welcome to this API")
+})
+
 
 
 
@@ -39,9 +39,6 @@ app.use((req, res)=>{
 
 
 
-app.get('/', (req, res)=>{
-    res.send("Hi, welcome to this API")
-})
 
 
 app.use((err, req, res, next)=>{
