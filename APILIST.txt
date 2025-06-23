@@ -1,0 +1,30 @@
+PRODUCTS CONTROLLER-->
+Get PRODUCTS- done
+Add a PRODUCT- done
+Get one product - done
+Rate a product -done
+filter products- done
+add product to cart - done
+get items of cart - done
+remove itmes from cart - done
+
+
+User CONTROLLER
+SignUp - email, name,passowrd, typeOfUser(customer, seller) - done
+SingIn - email, password - done
+
+
+FOLDER STRUCTURE FOR ANY API DEVELOPER----->
+
+routing configuration
+creating APIs
+different API methods
+middlewares
+route Parameters
+Query Parameters
+Testing API using POSTMAN
+Securing APi using jwt token
+Documenting API using Swagger
+CORS
+Logging
+Error HAndling

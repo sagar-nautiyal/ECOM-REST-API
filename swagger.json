@@ -1,0 +1,78 @@
+{
+    "openapi":"3.0.4",
+    "info":{
+        "version":"1.0.0",
+        "description":"API Documentation for our ECOMM-REST API application",
+        "title":"ECOM-REST API"
+    },
+    "servers":[
+        {
+            "url":"http://localhost:3000"
+        }
+    ],
+    "components":{
+        "securitySchemes":{
+            "JWT":{
+                "in":"header",
+                "name":"Authorization",
+                "type":"apiKey"
+            }
+        }
+    },
+    
+    "paths":{
+        "/api/products" : {
+            "get":{
+                "summary":"Get products",
+                "description":"User will get all the products",
+                "tags":["Products"],
+                "security":[{
+                    "JWT":{}
+                }],
+                "responses":{
+                    "200":{
+                        "description":"OK"
+                    },
+                    "400":{
+                        "description":"Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/user/signin" : {
+            "post":{
+                "summary":"Login user",
+                "description":"User login to get token", 
+                "tags":["Users"],
+                "requestBody":{
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":
+                            {
+                                "type":"object",
+                                "properties":{
+                                    "email":{
+                                        "type":"string"
+                                    },
+                                    "password":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"OK"
+                    },
+                    "400":{
+                        "description":"Invalid Crendetials"
+                    }
+                }
+            }
+        }
+    }
+}
